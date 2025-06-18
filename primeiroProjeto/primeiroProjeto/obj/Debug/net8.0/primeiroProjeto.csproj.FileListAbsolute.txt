@@ -1,0 +1,15 @@
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\bin\Debug\net8.0\primeiroProjeto.exe
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\bin\Debug\net8.0\primeiroProjeto.deps.json
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\bin\Debug\net8.0\primeiroProjeto.runtimeconfig.json
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\bin\Debug\net8.0\primeiroProjeto.dll
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\bin\Debug\net8.0\primeiroProjeto.pdb
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\obj\Debug\net8.0\primeiroProjeto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\obj\Debug\net8.0\primeiroProjeto.AssemblyInfoInputs.cache
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\obj\Debug\net8.0\primeiroProjeto.AssemblyInfo.cs
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\obj\Debug\net8.0\primeiroProjeto.csproj.CoreCompileInputs.cache
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\obj\Debug\net8.0\primeiroProjeto.sourcelink.json
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\obj\Debug\net8.0\primeiroProjeto.dll
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\obj\Debug\net8.0\refint\primeiroProjeto.dll
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\obj\Debug\net8.0\primeiroProjeto.pdb
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\obj\Debug\net8.0\primeiroProjeto.genruntimeconfig.cache
+C:\Users\William\Documents\Estudos\CSharp\primeiroProjeto\primeiroProjeto\obj\Debug\net8.0\ref\primeiroProjeto.dll
