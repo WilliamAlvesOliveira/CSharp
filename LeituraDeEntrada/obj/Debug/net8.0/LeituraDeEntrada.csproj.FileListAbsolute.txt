@@ -1,0 +1,15 @@
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\bin\Debug\net8.0\LeituraDeEntrada.exe
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\bin\Debug\net8.0\LeituraDeEntrada.deps.json
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\bin\Debug\net8.0\LeituraDeEntrada.runtimeconfig.json
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\bin\Debug\net8.0\LeituraDeEntrada.dll
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\bin\Debug\net8.0\LeituraDeEntrada.pdb
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\obj\Debug\net8.0\LeituraDeEntrada.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\obj\Debug\net8.0\LeituraDeEntrada.AssemblyInfoInputs.cache
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\obj\Debug\net8.0\LeituraDeEntrada.AssemblyInfo.cs
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\obj\Debug\net8.0\LeituraDeEntrada.csproj.CoreCompileInputs.cache
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\obj\Debug\net8.0\LeituraDeEntrada.sourcelink.json
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\obj\Debug\net8.0\LeituraDeEntrada.dll
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\obj\Debug\net8.0\refint\LeituraDeEntrada.dll
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\obj\Debug\net8.0\LeituraDeEntrada.pdb
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\obj\Debug\net8.0\LeituraDeEntrada.genruntimeconfig.cache
+C:\Users\William\Documents\Estudos\CSharp\LeituraDeEntrada\obj\Debug\net8.0\ref\LeituraDeEntrada.dll
