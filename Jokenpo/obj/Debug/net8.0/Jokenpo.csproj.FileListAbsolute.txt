@@ -1,0 +1,15 @@
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\bin\Debug\net8.0\Jokenpo.exe
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\bin\Debug\net8.0\Jokenpo.deps.json
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\bin\Debug\net8.0\Jokenpo.runtimeconfig.json
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\bin\Debug\net8.0\Jokenpo.dll
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\bin\Debug\net8.0\Jokenpo.pdb
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\obj\Debug\net8.0\Jokenpo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\obj\Debug\net8.0\Jokenpo.AssemblyInfoInputs.cache
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\obj\Debug\net8.0\Jokenpo.AssemblyInfo.cs
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\obj\Debug\net8.0\Jokenpo.csproj.CoreCompileInputs.cache
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\obj\Debug\net8.0\Jokenpo.sourcelink.json
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\obj\Debug\net8.0\Jokenpo.dll
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\obj\Debug\net8.0\refint\Jokenpo.dll
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\obj\Debug\net8.0\Jokenpo.pdb
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\obj\Debug\net8.0\Jokenpo.genruntimeconfig.cache
+C:\Users\William\Documents\Estudos\CSharp\Jokenpo\obj\Debug\net8.0\ref\Jokenpo.dll

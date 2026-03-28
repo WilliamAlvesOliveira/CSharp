@@ -32,7 +32,7 @@ namespace LeituraDeEntradas
             //por padrão toda entrada de dados do usuário é uma string
 
             int n1 = int.Parse(Console.ReadLine());//converte para int
-            char s = char.Parse(Console.Read * ()); //converte para char
+            char s = char.Parse(Console.ReadLine()); //converte para char
             double nota = double.Parse(Console.ReadLine());
 
         }
