@@ -63,7 +63,7 @@ namespace GestordeEstoque
         public void RemoverProduto(int qtd)
         {
             // Subtrai a quantidade atual
-            if (qtd >= 0 && qtd < Qtd)
+            if (qtd >= 0 && qtd <= Qtd)
             {
                 Qtd -= qtd;
             }
@@ -72,8 +72,6 @@ namespace GestordeEstoque
                 Console.WriteLine("Quantidade Inválida!");
                 Console.Write("\n");
             }
-
-            // ⚠️ Aqui poderia ter uma validação para evitar estoque negativo
         }
     }
 }

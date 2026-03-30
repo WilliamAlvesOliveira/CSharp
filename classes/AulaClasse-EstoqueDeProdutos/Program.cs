@@ -69,7 +69,7 @@ namespace ConsoleApp
 
             // Mostra a quantidade atualizada
             // E recalcula o valor total em estoque
-            Console.WriteLine($"Quantidade atualizada! {produto1.Qtd}\nQuantidade em estoque: {produto1.ValorTotalEstoque().ToString("F2", InvariantCulture)}");
+            Console.WriteLine($"Quantidade: {produto1.Qtd}\nQuantidade em estoque: {produto1.ValorTotalEstoque().ToString("F2", InvariantCulture)}");
 
             Console.WriteLine();
 
@@ -80,7 +80,7 @@ namespace ConsoleApp
             produto1.RemoverProduto(int.Parse(Console.ReadLine()));
 
             // Mostra novamente os dados atualizados
-            Console.WriteLine($"Quantidade atualizada! {produto1.Qtd}\nQuantidade em estoque: {produto1.ValorTotalEstoque().ToString("F2", InvariantCulture)}");
+            Console.WriteLine($"Quantidade: {produto1.Qtd}\nQuantidade em estoque: {produto1.ValorTotalEstoque().ToString("F2", InvariantCulture)}");
 
             Console.WriteLine();
 
