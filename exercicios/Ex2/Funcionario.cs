@@ -10,5 +10,20 @@ namespace Funcionarios
     {
         public string Nome;
         public double Salario;
+        public double Imposto;
+
+        public double SalarioLiquido()
+        {
+            return Salario - Imposto;
+        }
+
+        public void AumentarSalario(double porcentagem)
+        {
+            if(porcentagem > 0)
+            {
+                Salario += Salario * porcentagem / 100;
+            }
+            
+        }
     }
 }
