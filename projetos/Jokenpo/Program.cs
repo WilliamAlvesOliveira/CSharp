@@ -1,52 +1,53 @@
 ﻿using Microsoft.VisualBasic;
 using System;
 using System.Threading;
+using static Jokenpo.Models.Colors;
+using Jokenpo.View.TableRender;
+
+
 
 namespace Jokenpo
 {
 
     class Program
     {
-        const string RESET = "\u001b[0m";
-        const string RED = "\u001b[31m";
-        const string GREEN = "\u001b[32m";
-        const string YELLOW = "\u001b[33m";
-        const string BLUE = "\u001b[34m";
-        const string CYAN = "\u001b[36m";
-        const string BOLD = "\u001b[1m";
-
         static void Main(string[] args)
         {
             string[] jokenpo = { "PEDRA", "PAPEL", "TESOURA" };
             bool hasWinner;
             string winnerName = "";
 
-            Console.WriteLine("|---------------------------------------------|");
-            Console.WriteLine("|                *** JOKENPO ***              |");
-            Console.WriteLine("|---------------------------------------------|");
-            Console.WriteLine($"|Opção {CYAN}[1]PEDRA{RESET}                               |");
-            Console.WriteLine($"|Opção {CYAN}[2]PAPEL{RESET}                               |");
-            Console.WriteLine($"|Opção {CYAN}[3]TESOURA{RESET}                             |");
-            Console.Write("|                        Digite a sua opção: "+ GREEN);
+            TableRender.DrawLine('=');
+            TableRender.Text("*** JOKENPO ***");
+            TableRender.DrawLine();
+            TableRender.Text("Selecione a sua opção:", "L");
+            TableRender.JumpLine();
+            TableRender.Text($"Opção {CYAN}[1]PEDRA{RESET}", "L");
+            TableRender.Text($"Opção {CYAN}[2]PAPEL{RESET}", "L");
+            TableRender.Text($"Opção {CYAN}[3]TESOURA{RESET}","L");
+            TableRender.Text($"Digite a sua opção: {GREEN}","r","noWrap");
+            
             int option = int.Parse(Console.ReadLine());
+            Console.Write(RESET);
             
             Random rnd = new Random();
             int computer = rnd.Next(1, 4);
             
-            Console.WriteLine(RESET + "|---------------------------------------------|");
-            Console.WriteLine        ("|                                             |");
+            Console.Write(RESET);
+            TableRender.DrawLine();
+            TableRender.JumpLine();
             Console.Write        ($"|{CYAN}                   Jo");
             Thread.Sleep(500);
             Console.Write("ken");
             Thread.Sleep(500);
             Console.WriteLine($"po{RESET}                   |");
             Thread.Sleep(500);
-            Console.WriteLine("|                                             |");
-            Console.WriteLine("|---------------------------------------------|");
-            Console.WriteLine("|                                             |");
+            TableRender.JumpLine();
+            TableRender.DrawLine();
+            TableRender.JumpLine();
             Console.WriteLine(
                 $"|{BOLD}{$"PLAYER [{jokenpo[option - 1]}]",21} x {$"[{jokenpo[computer - 1]}] COMPUTADOR",-21}{RESET}|");
-            Console.WriteLine("|                                             |");
+            TableRender.JumpLine();
 
             if (option == computer) {
                 hasWinner = false;
@@ -73,12 +74,8 @@ namespace Jokenpo
                 Console.WriteLine($"| {YELLOW}EMPATE{RESET}                                      |");
             }
 
-            Console.WriteLine("|---------------------------------------------|");
+            TableRender.DrawLine('=');
 
         }
     }
 }
-
-
-
-
