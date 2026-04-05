@@ -1,9 +1,11 @@
-﻿namespace Jokenpo.View.TableRender
+﻿using static Jokenpo.Models.Colors;
+
+namespace Jokenpo.View.TableRender
 {
-    public class TableRender
+    public class Render
     {
-        private const int WIDTH = 45;
-        private const int CONTENT_WIDTH = 43;
+        public const int WIDTH = 45;
+        public const int CONTENT_WIDTH = WIDTH - 2;
         public static void DrawLine(char caractere = '-')
         {
             Console.WriteLine($"|{new string(caractere, WIDTH)}|");
@@ -87,6 +89,34 @@
                
         }
 
+        public static void Header()
+        {
+            DrawLine('=');
+            JumpLine();
+            Text($"{BOLD}*** JOKENPO ***{RESET}");
+            DrawLine();
+        }
 
+        public static void TimerBar(int segundos = 10)
+        {
+            int totalWidth = CONTENT_WIDTH;
+
+            for (int i = segundos; i >= 0; i--)
+            {
+                int barSize = (int)((double)i / segundos * totalWidth);
+
+                // Parte preenchida com fundo vermelho
+                string filled = $"{BG_RED}{new string(' ', barSize)}{RESET}";
+                // Parte vazia normal
+                string empty = new string(' ', totalWidth - barSize);
+
+                Console.Write("\r");
+                Console.Write($"| {filled}{empty} |");
+
+                Thread.Sleep(1000);
+            }
+
+            Console.WriteLine();
+        }
     }
 }
