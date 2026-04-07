@@ -12,7 +12,7 @@ namespace AUTO_PROPERTIES
             Console.WriteLine("Preço: " + p1.Preco);
             Console.WriteLine("Quantidade: " + p1.Quantidade);
 
-            Console.WriteLine("--------------------------");
+            Console.WriteLine("-------------------------");
 
             // Alterando valores
             //p1.Preco = 18.00;
