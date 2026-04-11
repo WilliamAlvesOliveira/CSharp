@@ -1,22 +1,18 @@
-﻿using System;
+﻿using Jokenpo.Models;
+using Jokenpo.View.TableRender;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Jokenpo.View.TableRender;
+using static Jokenpo.Models.StateManager ;
 using static Jokenpo.Models.Colors;
+using static Jokenpo.Models.Settings.SettingsOptions;
 
 namespace Jokenpo.View.Menus
 {
     public static class MenuConfig
     {
-        public static MenuOption[] Options = new MenuOption[]
-        {
-            new MenuOption { Label = "Dificuldade", Values = new[] { "Fácil","Médio", "Difícil" }, CurrentIndex = 0 },
-            new MenuOption { Label = "Número de Partidas", Values = new[] { "1", "3", "5" }, CurrentIndex = 1 },
-            new MenuOption { Label = "Opção 3", Values = new[] { "Sim", "Não" }, CurrentIndex = 0 }
-        };
-
         public static void Run()
         {
             int selectedIndex = 0;
@@ -51,6 +47,7 @@ namespace Jokenpo.View.Menus
                         break;
                 }
             }
+            
         }
 
         public static void RenderSettingScreen(int selectedIndex)
@@ -88,27 +85,6 @@ namespace Jokenpo.View.Menus
             Render.Text("ENTER para sair.","l");
             Render.JumpLine();
             Render.DrawLine('=');
-        }
-    }
-
-    public class MenuOption
-    {
-        public string Label { get; set; }
-        public string[] Values { get; set; }
-        public int CurrentIndex { get; set; }
-
-        public string CurrentValue => Values[CurrentIndex];
-
-        public void NextValue()
-        {
-            if (CurrentIndex < Values.Length - 1)
-                CurrentIndex++;
-        }
-
-        public void PreviousValue()
-        {
-            if (CurrentIndex > 0)
-                CurrentIndex--;
         }
     }
 }

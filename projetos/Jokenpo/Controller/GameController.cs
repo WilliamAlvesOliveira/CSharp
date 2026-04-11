@@ -1,11 +1,6 @@
-﻿using Jokenpo.View.Game;
+﻿using Jokenpo.Models;
+using Jokenpo.View.Game;
 using Jokenpo.View.Menus;
-using Jokenpo.View.TableRender;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Jokenpo.Controller
 {
@@ -13,15 +8,42 @@ namespace Jokenpo.Controller
     {
         public static void APP()
         {
-            MenuPrincipal.MenuScreen();
+            var stateManager = new StateManager();
+
             while (true)
             {
-                GameScreen.GamePlay();
-                int restart = GameScreen.RestartMessage();
+                switch (stateManager.CurrentState)
+                {
+                    case GameState.MenuPrincipal:
+                        MenuPrincipal.Run(stateManager);
+                        break;
 
-                if (restart != 1) break;
+                    case GameState.MenuConfig:
+                        MenuConfig.Run();
+                        // ao sair do MenuConfig, volta para o principal
+                        stateManager.ChangeState(GameState.MenuPrincipal);
+                        break;
+
+                    case GameState.Game:
+                        while (true)
+                        {
+                            GameScreen.GamePlay();
+                            int restart = GameScreen.RestartMessage();
+                            if (restart == 2) break;
+                        }
+                       
+                        stateManager.ChangeState(GameState.MenuPrincipal);
+                        break;
+
+                    case GameState.Stats:
+                        // aqui você pode criar uma tela de status
+                        Console.Clear();
+                        Console.WriteLine("Exibindo estatísticas...");
+                        Console.ReadKey();
+                        stateManager.ChangeState(GameState.MenuPrincipal);
+                        break;
+                }
             }
-            
         }
     }
 }

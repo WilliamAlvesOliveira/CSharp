@@ -80,6 +80,10 @@ namespace Jokenpo.View.Game
 
             Render.JumpLine();
             Render.DrawLine('=');
+            Thread.Sleep(500);
+            Console.Write(" Aguarde");
+            Thread.Sleep(500);
+            Render.WaitingDots();
 
         }
 
@@ -134,7 +138,6 @@ namespace Jokenpo.View.Game
         
         public static int RestartMessage()
         {
-            Thread.Sleep(5000);
             Console.Clear();
             Render.DrawLine('=');
             Render.JumpLine();

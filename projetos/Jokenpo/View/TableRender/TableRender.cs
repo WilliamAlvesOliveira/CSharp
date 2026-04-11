@@ -1,4 +1,5 @@
 ﻿using static Jokenpo.Models.Colors;
+using Jokenpo.Models;
 
 namespace Jokenpo.View.TableRender
 {
@@ -94,6 +95,7 @@ namespace Jokenpo.View.TableRender
             DrawLine('=');
             JumpLine();
             Text($"{BOLD}*** JOKENPO ***{RESET}");
+            Text($"Dificuldade: {Jokenpo.Models.Settings.SettingsOptions.Options[0].CurrentValue}");
             DrawLine();
         }
 
@@ -118,5 +120,26 @@ namespace Jokenpo.View.TableRender
 
             Console.WriteLine();
         }
+
+        public static string Option(string option, string selectedOption)
+        {
+            if (option == selectedOption)
+            {
+                return $"{BOLD}{BLUE}{BG_WHITE}{option}{RESET}";
+            }
+            else
+            {
+                return $"{option}";
+            }
+        }
+        public static void WaitingDots()
+        {
+            for (int times = 0; times < 3; times++)
+            {
+                Console.Write(".");
+                Thread.Sleep(500);
+            }
+        }
     }
+
 }
