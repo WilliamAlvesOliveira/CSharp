@@ -134,6 +134,7 @@ namespace Jokenpo.View.TableRender
         }
         public static void WaitingDots()
         {
+            Thread.Sleep(500);
             for (int times = 0; times < 3; times++)
             {
                 Console.Write(".");
