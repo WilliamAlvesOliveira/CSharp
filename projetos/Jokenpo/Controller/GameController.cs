@@ -20,7 +20,6 @@ namespace Jokenpo.Controller
 
                     case GameState.MenuConfig:
                         MenuConfig.Run();
-                        // ao sair do MenuConfig, volta para o principal
                         stateManager.ChangeState(GameState.MenuPrincipal);
                         break;
 
@@ -36,10 +35,6 @@ namespace Jokenpo.Controller
                         break;
 
                     case GameState.Stats:
-                        // aqui você pode criar uma tela de status
-                        Console.Clear();
-                        Console.WriteLine("Exibindo estatísticas...");
-                        Console.ReadKey();
                         stateManager.ChangeState(GameState.MenuPrincipal);
                         break;
                 }

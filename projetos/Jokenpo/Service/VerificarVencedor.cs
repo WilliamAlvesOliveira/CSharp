@@ -1,5 +1,6 @@
 ﻿using Jokenpo.View.TableRender;
 using static Jokenpo.Models.Colors;
+using Jokenpo.Service;
 
 
 
@@ -9,26 +10,25 @@ namespace Jokenpo.Service
     {
             public static (string vencedor, int cpu)
         
-            VerificarVencedor(int option, double time)
+            VerificarVencedor(int playerOption, double choiseTime)
             {
-
-                Random rnd = new Random();
-                int computer = rnd.Next(1, 4);
-
-                Render.Text($"opção {option} tempo {time}");
+                Render.Text($"opção {playerOption} tempo {choiseTime}");
                 Render.DrawLine('=');
 
-                if (option == -1)
+                if (playerOption == -1)
                 {
-                    return ("Timeout", computer);
+                    return ("Timeout", 0);
                 }
-                else if (option == computer)
+
+                int computer = GameAI.GetMove(playerOption, choiseTime);
+
+                if (playerOption == computer)
                 {
                     return ("Empate", computer);
                 }
-                else if (option == 1 && computer == 3 ||
-                    option == 2 && computer == 1 ||
-                    option == 3 && computer == 2)
+                else if (playerOption == 1 && computer == 3 ||
+                    playerOption == 2 && computer == 1 ||
+                    playerOption == 3 && computer == 2)
                 {
                     return ("Player", computer);
                 }

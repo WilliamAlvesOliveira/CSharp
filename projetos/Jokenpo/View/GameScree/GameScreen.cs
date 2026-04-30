@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.FileIO;
+﻿using Jokenpo.Models;
+using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,7 +11,8 @@ namespace Jokenpo.View.Game
 {
     public class GameScreen
     {
-        private static int lastRestartSelection = 1; // 1 = Não (default)
+        private static int timer = 3;
+        private static int RestartSelection = 1;
 
         public static void GamePlay()
         {
@@ -24,14 +26,26 @@ namespace Jokenpo.View.Game
             Render.JumpLine();
             Render.Text("Tempo");
 
-            var (option, tempo) = PlayerInputWithTimer(5);
+            if(GameSettings.GameLevel == 0)
+            {
+                timer = 5;
+            }
+            else
+            {
+                timer = 3;
+            }
+
+            var (playerOption, choiseTime) = PlayerInputWithTimer(timer);
+
+            if (choiseTime > timer) playerOption = -1;
 
             Console.Clear();
             Render.Header();
             Thread.Sleep(500);
-
-            var (vencedor, CPU) = Service.Verificador.VerificarVencedor(option, tempo);
-            ShowResults(option, vencedor, CPU);
+            
+           
+            var (vencedor, CPU) = VerificarVencedor(playerOption, choiseTime);
+            ShowResults(playerOption, vencedor, CPU);
         }
 
         public static void ShowResults(int option, string vencedor, int computer)
@@ -61,8 +75,7 @@ namespace Jokenpo.View.Game
             Render.DrawLine();
             Render.JumpLine();
 
-            Console.WriteLine(
-                $"|{BOLD}{$"PLAYER [{jokenpo[option - 1]}]",21} x {$"[{jokenpo[computer - 1]}] COMPUTADOR",-21}{RESET}|");
+            Render.Text($"{BOLD}{$"PLAYER[{jokenpo[option - 1]}]"} x {$"[{jokenpo[computer - 1]}]COMPUTADOR"}{RESET}");
 
             Render.JumpLine();
             Render.DrawLine();
@@ -86,6 +99,7 @@ namespace Jokenpo.View.Game
 
             Render.JumpLine();
             Render.DrawLine('=');
+            Console.ReadLine();
             Thread.Sleep(500);
             Console.Write(" Aguarde");
             Render.WaitingDots();
@@ -185,7 +199,7 @@ namespace Jokenpo.View.Game
                 Console.ReadKey(true);
             }
 
-            int selectedIndex = lastRestartSelection;
+            int selectedIndex = RestartSelection;
             bool running = true;
 
             while (running)
@@ -229,7 +243,7 @@ namespace Jokenpo.View.Game
                 }
             }
 
-            lastRestartSelection = selectedIndex;
+            RestartSelection = selectedIndex;
 
             return selectedIndex == 0 ? 1 : 2;
         }

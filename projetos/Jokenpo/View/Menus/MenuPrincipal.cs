@@ -2,7 +2,7 @@
 using Jokenpo.Models;
 using Jokenpo.View.TableRender;
 using static Jokenpo.Models.Colors;
-using static Jokenpo.Models.Settings.MenuOptions;
+using static Jokenpo.Models.Settings.MainMenuOptions;
 
 namespace Jokenpo.View.Menus
 {
@@ -43,6 +43,7 @@ namespace Jokenpo.View.Menus
 
                             case "Status":
                                 manager.ChangeState(GameState.Stats);
+                                StatsMenu.Run();
                                 break;
 
                             case "START GAME":
@@ -64,6 +65,8 @@ namespace Jokenpo.View.Menus
             Render.DrawLine('=');
             Render.JumpLine();
             Render.Text($"{BOLD}Menu Principal{RESET}");
+            Render.Text($"{GameSettings.Difficulty}");
+            Render.Text($"{GameSettings.Rounds}");
             Render.JumpLine();
             Render.DrawLine();
             Render.JumpLine();
@@ -73,7 +76,7 @@ namespace Jokenpo.View.Menus
             Render.JumpLine();
             Render.DrawLine();
             Render.JumpLine();
-            Render.Text(Render.Option(Settings.MenuOptions.Options[2], Settings.MenuOptions.CurrentOption));
+            Render.Text(Render.Option(Settings.MainMenuOptions.Options[2], Settings.MainMenuOptions.CurrentOption));
             Render.JumpLine();
             Render.DrawLine('=');
 
