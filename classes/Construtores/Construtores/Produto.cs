@@ -73,18 +73,7 @@ namespace Construtores
             Qtd = quantidade;
         }
 
-        /*
-         * Construtor simplificado:
-         * 
-         * Neste caso, o usuário informa apenas nome e preço.
-         * A quantidade é definida automaticamente com um valor padrão (1).
-         * 
-         * Isso é útil para facilitar a criação de objetos quando nem todos
-         * os dados precisam ser informados manualmente.
-         */
-
-        //O conceito de mais de um construtor é a SOBRECARGA.
-
+        //SOBRECARGA
         public ProdutoWithConstructor(string nome, double preco)
         {
             Nome = nome;

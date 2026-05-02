@@ -53,19 +53,6 @@ class Program
          * evitando erros futuros.
          */
 
-
-        /*
-         * SOBRECARGA DE CONSTRUTORES:
-         * 
-         * Sobrecarga significa ter vários construtores na mesma classe,
-         * porém com diferentes quantidades ou tipos de parâmetros.
-         * 
-         * Isso permite criar objetos de maneiras diferentes,
-         * dependendo da necessidade.
-         */
-
-        // Aqui estamos utilizando um dos construtores disponíveis na classe,
-        // passando somente nome e preço como parâmetros
         ProdutoWithConstructor produto3 = new ProdutoWithConstructor("Arroz", 10.00);
         Console.WriteLine(produto3);
 
